@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Formulario = () => {
+const Formulario = ({guardarBusquedaLetra}) => {
 
     //state
     const [busqueda, guadarBusqueda] = useState({
@@ -36,8 +36,9 @@ const Formulario = () => {
         }
         guardarError(false);
 
-
         // pasar al componenenet principal
+        guardarBusquedaLetra(busqueda);
+
 
 
     }
@@ -47,13 +48,14 @@ const Formulario = () => {
 
     return ( 
         <div className="bg-dark">
+            { error ? <p className="alert alert-danger text-center p-2"> Todos los campos son obligatorios</p> : null} 
             <div className="container">
                 <div className="row">
+                    
+
                     <form
                       onSubmit={buscarInformacion}
                       className="col card text-white bg-transparent mb-5 pt-5 pb-2"
-
-                    
                     >
                         <fieldset>
                             <legend className="text-center">Busca la letra de tu canción favorita</legend>
