@@ -1,11 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Formulario = () => {
+
+    //state
+    const [busqueda, guadarBusqueda] = useState({
+        artista: '',
+        cancion: ''
+
+    });
+
+    const [error , guardarError] = useState(false);
+
+    // extraer
+
+    const { artista , cancion } = busqueda;
+
+
+    // funcion a cada input para leer su contenido
+    const actualizarState = e => {
+        guadarBusqueda({
+            ...busqueda,
+            [e.target.name] : e.target.value
+
+        })
+    }
+
+    // consulta a la api
+    const buscarInformacion = e => {
+        e.preventDefault();
+
+        if(artista.trim() === '' || cancion.trim() === '' ){
+            guardarError(true);
+            return;
+
+        }
+        guardarError(false);
+
+
+        // pasar al componenenet principal
+
+
+    }
+
+
+
+
     return ( 
         <div className="bg-dark">
             <div className="container">
                 <div className="row">
                     <form
+                      onSubmit={buscarInformacion}
                       className="col card text-white bg-transparent mb-5 pt-5 pb-2"
 
                     
@@ -22,6 +67,8 @@ const Formulario = () => {
                                             className="form-control"
                                             name="artista" 
                                             placeholder="Name artist"
+                                            onChange={actualizarState}
+                                            value={artista}
                                         />
                                     </div>
                                 </div>
@@ -34,13 +81,15 @@ const Formulario = () => {
                                             className="form-control"
                                             name="cancion" 
                                             placeholder="Name song"
+                                            onChange={actualizarState}
+                                            value={cancion}
                                         />
                                     </div>
                                 </div>
                             </div>
                             <button 
                                 type="submit"
-                                className="btn btn-warning float-right"
+                                className="btn btn-warning float-right text-dark"
                                 >
                                 Search</button>
                         </fieldset>

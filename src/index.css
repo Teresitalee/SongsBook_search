@@ -23,6 +23,7 @@ legend {
   margin: 0;
   margin-bottom: 40px;
   font-family: 'Work Sans', sans-serif;
+  color: black;
 }
 
 legend::before {
@@ -30,7 +31,7 @@ legend::before {
   content: '';
   width: calc(120% );
   display: block;
-  background-color:#EB6864;
+  background-color:#F5E625;
   height: 40px;
   z-index:-1;
   left: -30px;
