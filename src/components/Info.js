@@ -8,7 +8,7 @@ const Info = ({info}) => {
 
     return ( 
         <div className="card border-light">
-            <div className="card-header bg-primary text-light font-weight-bold">
+            <div className="card-header bg-warning text-dark font-weight-bold">
                 Información Artista
             </div>
             <div className="card-body">

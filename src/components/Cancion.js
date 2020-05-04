@@ -5,9 +5,8 @@ const Cancion = ({letra}) => {
     if(letra.length === 0 ) return null;
     return (
         <Fragment>
-            <h2>Letra cancion</h2>
-            <p className="letra">{letra}</p>
-            
+            <h2>Letra canción</h2>
+            <p className="letra">{letra}</p> 
         </Fragment>
     );
      

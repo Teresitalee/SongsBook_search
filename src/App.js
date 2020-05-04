@@ -57,8 +57,6 @@ function App() {
           <div className="col-md-6">
             <Cancion
               letra={letra}
-
-            
             />
             
             
