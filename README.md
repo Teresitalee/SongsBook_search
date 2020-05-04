@@ -2,16 +2,15 @@
 Es un buscador de letras de canciones. Es un biblioteca de información resumida; de cual de 
 puede encontrar gran parte de todos los géneros musicales.
 
-Las API , utilizadas son diferentes una es de :
+Las API , utilizadas son :
 - Lyrics OVH : Entrega en lyrics completo del artista y/o Grupo musical.
 - Theaudiodb : Entrega información del album (fotografía) , Biografìa completa y tipo de género musical.
 
 
-
-visualmente el buscador funciona al ingresar el nombre del artista y nombre de canción <br>
+ El buscador funciona al ingresar el nombre del artista y nombre de la canción <br>
 **Resultado**
-- Tipo de género Musical
-- Biografía completa del artista
+- Información tipo género Musical
+- Información Biografía completa del artista
 - Portada del album ( según canción encontrada)
 
 
